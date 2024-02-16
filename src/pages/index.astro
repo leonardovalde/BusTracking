@@ -1,9 +1,17 @@
 ---
+import SendDataButton from '../components/SendDataButton';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
 
+<script>
+	const click = async () => {
+		const res = await fetch('https://dummyjson.com/todos')
+		console.log(await res.json());
+	}
+	document.getElementById('btn')?.addEventListener('click', click);
+</script>
 <Layout title="Bus Tracking Panel">
+	<SendDataButton client:visible/>
 </Layout>
 
 <style>
