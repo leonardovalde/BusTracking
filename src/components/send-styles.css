@@ -1,0 +1,59 @@
+.sendForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 100px;
+  gap: 10px;
+  background-color: transparent;
+}
+
+.logList {
+  border: 1px solid #e9e8e8;
+  padding: 30px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-auto-rows: 1fr;
+  max-height: 60vh;
+  overflow-y: auto;
+  gap: 10px;
+}
+
+.logList::-webkit-scrollbar {
+  display: none;
+}
+
+.logItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.logItem * {
+  margin: 2px;
+}
+
+.logItem span {
+  font-weight: bold;
+}
+
+.item-index {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.light {
+  animation: fadeInOut 1s infinite; /* 2s de duración, infinito se repite indefinidamente */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1; /* Opacidad al inicio de la animación */
+  }
+  50% {
+    opacity: 0.5; /* Opacidad a la mitad de la animación */
+  }
+  100% {
+    opacity: 1; /* Opacidad al final de la animación */
+  }
+}
