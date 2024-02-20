@@ -52,7 +52,7 @@ function SendDataButton() {
   }
   return (
     <div className="sendForm">
-      <h1 className="display-1">Location Tracker</h1>
+      <h1 className="display-1 text-center">Location Tracker</h1>
       <input
         className="form-control"
         type="text"
@@ -97,7 +97,7 @@ function SendDataButton() {
         </div>
       )}
       <hr className="my-4" />
-      <h3 className="display-4">Location History</h3>
+      <h3 className="display-4 text-center">Location History</h3>
       {locationHistory.length > 0 && (
         <ul className="logList">
           {locationHistory.map((entry, index) => (
